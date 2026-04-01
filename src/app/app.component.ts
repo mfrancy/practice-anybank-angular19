@@ -12,6 +12,7 @@ import { ExtratoComponent } from './extrato/extrato.component';
 })
 export class AppComponent {
   transacoes = signal<Transacao[]>([]);
+  
 
   saldo = computed(() => {
     return this.transacoes().reduce((acc, transacaoAtual) => {
